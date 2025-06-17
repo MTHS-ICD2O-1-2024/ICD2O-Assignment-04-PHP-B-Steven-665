@@ -46,22 +46,18 @@
         }
 
         // Material price
-        switch ($material) {
-          case "salmon":
-            $materialPrice = $salmonPrice;
-            break;
-          case "tuna":
-            $materialPrice = $tunaPrice;
-            break;
-          case "arctic-clam":
-            $materialPrice = $arcticClamPrice;
-            break;
-          case "sweet-shrimp":
-            $materialPrice = $sweetShrimpPrice;
-            break;
-          default:
-            $materialPrice = 0;
+        if ($material == "salmon") {
+          $materialPrice = $salmonPrice;
+        } elseif ($material == "tuna") {
+          $materialPrice = $tunaPrice;
+        } elseif ($material == "arctic-clam") {
+          $materialPrice = $arcticClamPrice;
+        } elseif ($material == "sweet-shrimp") {
+          $materialPrice = $sweetShrimpPrice;
+        } else {
+          $materialPrice = 0;
         }
+
 
         // Total
         $totalPrice = $sizePrice + $materialPrice;
